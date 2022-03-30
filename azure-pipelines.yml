@@ -11,20 +11,13 @@ pool:
   
 strategy:
   matrix:
-    Python27:
-      python.version: '2.7'
-    Python35:
-      python.version: '3.5'
-    Python36:
-      python.version: '3.6'
-    Python37:
-      python.version: '3.7'
+    Python39:
+      python.version: '3.9'
 
 steps:
 - task: UsePythonVersion@0
   inputs:
     versionSpec: '$(python.version)'
-    architecture: 'x64'
   displayName: 'Use Python $(python.version)'
 
 - script: |
